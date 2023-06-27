@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                echo 'Jenkinsに到達しました'
+                checkout scm
+                sh 'python -m unittest discover .'
             }
         }
     }
