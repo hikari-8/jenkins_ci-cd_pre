@@ -2,10 +2,10 @@ pipeline {
     agent any
 
     stages {
-        stage('Test') {
+        stage('test-pr') {
             steps {
-                checkout scm // リポジトリからソースコードをチェックアウトします
-                sh 'python -m unittest discover .' // テストを実行します
+                checkout scm
+                sh 'python -m unittest discover .'
             }
         }
     }
