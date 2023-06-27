@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('test-pr') {
+        stage('Test') {
             steps {
                 checkout scm
                 sh 'python -m unittest discover .'
