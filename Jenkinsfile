@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                python -v
             }
         }
         stage('Deploy') {
@@ -19,3 +19,14 @@ pipeline {
         }
     }
 }
+
+
+// テストコード
+    // stages {
+    //     stage('Test') {
+    //         steps {
+    //             checkout scm
+    //             sh 'python -m unittest discover .'
+    //         }
+    //     }
+    // }
